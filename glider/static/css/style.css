@@ -1,0 +1,36 @@
+/* glider/static/css/style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+#button-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+
+#button-bar button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#button-bar button:hover {
+    background-color: #555;
+}
