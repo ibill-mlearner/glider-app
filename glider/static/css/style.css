@@ -12,15 +12,6 @@ canvas {
     display: block;
 }
 
-#button-bar {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 10;
-    display: flex;
-    gap: 10px;
-}
-
 #button-bar button {
     padding: 5px 10px;
     font-size: 14px;

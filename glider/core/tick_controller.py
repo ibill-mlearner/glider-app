@@ -21,7 +21,7 @@ class TickController:
         self._running = False
         self._thread = None
 
-    # ───────────────────────────────────────────────────────── public API ──
+    # public API - logic tie ins
 
     def start(self):
         """Begin the background tick loop."""
@@ -37,21 +37,22 @@ class TickController:
         if self._thread and self._thread.is_alive():
             self._thread.join()
 
+    def clear(self, pattern):
+        """Reset the engine to its original pattern."""
+        self.stop()
+        self.engine.reset(pattern)
+
     def step_once(self):
         """Advance the engine exactly one tick (synchronous)."""
-        self.engine.step()
+        self.engine.tick()
 
-    def set_interval(self, interval):
-        """Change tick interval on the fly."""
-        self.interval = float(interval)
 
-    # ─────────────────────────────────────────────────────── internal ──
-
+    # -- ineternal method for looping with threads
     def _loop(self):
         """Background thread loop."""
         while self._running:
             start = time.time()
-            self.engine.step()
+            self.engine.tick()
             elapsed = time.time() - start
             sleep_time = max(0.0, self.interval - elapsed)
             time.sleep(sleep_time)

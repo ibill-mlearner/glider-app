@@ -6,13 +6,13 @@ export function createButtonBar(container = document.body) {
     bar.style.position = 'absolute';
     bar.style.top = '10px';
     bar.style.left = '10px';
-    bar.style.zIndex = '10';
     bar.style.display = 'flex';
     bar.style.gap = '10px';
 
     const buttons = [
         { id: 'btn-start', text: 'Start' },
         { id: 'btn-stop', text: 'Stop' },
+        { id: 'btn-tick', text: 'Tick'},
         { id: 'btn-step', text: 'Step' },
         { id: 'btn-clear', text: 'Clear' }
     ];

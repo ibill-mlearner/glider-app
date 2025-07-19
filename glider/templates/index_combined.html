@@ -3,19 +3,15 @@
 {% block title %}Glider Visualization – 3D + Controls{% endblock %}
 
 {% block head %}
-<!-- Additional <head> customization if needed -->
+
+<!--Head block content-->
+
 {% endblock %}
 
 {% block content %}
-<div id="button-bar">
-    <button id="btn-start">Start</button>
-    <button id="btn-stop">Stop</button>
-    <button id="btn-step">Step</button>
-    <button id="btn-clear">Clear</button>
-</div>
+
+<!--Body block content-->
 
 <div id="three-container"></div>
-
-<!-- Unified bootstrap for rendering + controls -->
 <script type="module" src="{{ url_for('static', filename='js/bootstrap_combined.js') }}"></script>
 {% endblock %}

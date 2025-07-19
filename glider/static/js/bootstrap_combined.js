@@ -7,11 +7,12 @@ import { attachButtonHandlers } from './ui/events.js';
 
 let lastTime = 0;
 let liveCells = new Set();
+let animationRunning = false;
 
-const gridW = 50;
-const gridH = 30;
-const targetFPS = 20;
-const frameInterval = 1000 / targetFPS;
+const gridW = 100;
+const gridH = 100;
+const targetFPS = 40;
+const frameInterval = 100 / targetFPS;
 
 
 initScene();
@@ -19,7 +20,7 @@ initGrid(scene, gridW, gridH);
 
 // insert renderer canvas at end of body
 document.body.appendChild(renderer.domElement);
-
+renderer.domElement.style.pointerEvents = "none";
 // build control buttons
 createButtonBar();
 
@@ -27,16 +28,11 @@ createButtonBar();
 attachButtonHandlers({
     onStart: () => fetch('/api/start', { method: 'POST' }),
     onStop:  () => fetch('/api/stop',  { method: 'POST' }),
-    onStep:  () => fetch('/api/step',  { method: 'POST' })
-    // onClear can be added later
+    onStep:  () => fetch('/api/step',  { method: 'POST' }),
+    onTick:  () => fetch('/api/tick',  { method: 'POST' })
 });
 startPolling();
 // -------------------------------- live state polling --------------------------------
-// async function fetchState() {
-//     const res = await fetch('/api/state');
-//     const data = await res.json();
-//     return new Set(data.gliders?.flatMap(g => g.cells).map(([x, y]) => `${x},${y}`) || []);
-// }
 
 function startPolling(interval = 500) {
     async function poll() {
@@ -70,4 +66,14 @@ async function animate(timestamp) {
 
     renderer.render(scene, camera);
 }
-animate();
+
+function startAnimation() {
+    if (!animationRunning) {
+        animationRunning = true;
+        requestAnimationFrame(animate);
+    }
+}
+startAnimation();
+
+
+window.renderer = renderer;

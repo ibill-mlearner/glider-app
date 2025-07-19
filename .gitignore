@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Logs and local runtime files
+*.log
+*.pid
+*.sqlite3
+
+# PyCharm
+.idea/
+
+# VSCode (if ever used)
+.vscode/
+
+# Environment variables or secrets
+.env
+.env.*
+
+# Node / frontend dependencies and build
+node_modules/
+*.bundle.js
+*.min.js
+*.map
+
+# Static cache / test outputs
+*.tmp
+*.cache
+.cache/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Test results
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Flask-specific
+instance/
+*.db
+
+# Local overrides
+config.local.*
+settings_local.*

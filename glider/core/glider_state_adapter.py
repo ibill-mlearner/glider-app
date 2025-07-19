@@ -9,7 +9,7 @@ class GliderStateAdapter:
     def __init__(self, engine):
         self.engine = engine
 
-    # ─────────────────────────────────── export ──
+    # export - json to front end
     def to_json_payload(self):
         """Return a dict ready for jsonify()"""
         cells = [
@@ -20,21 +20,3 @@ class GliderStateAdapter:
         ]
         return {"status": "ok", "gliders": [{"cells": cells}]}
 
-    # ─────────────────────────────────── import ──
-    def load_cells(self, cells):
-        """
-        Given a list of [x, y] pairs, reset grid and activate those cells.
-        Useful for syncing external edits back into the engine.
-        """
-        height = len(self.engine.grid)
-        width = len(self.engine.grid[0]) if height else 0
-
-        # Clear grid
-        for y in range(height):
-            for x in range(width):
-                self.engine.grid[y][x] = 0
-
-        # Activate cells
-        for x, y in cells:
-            if 0 <= y < height and 0 <= x < width:
-                self.engine.grid[y][x] = 1
