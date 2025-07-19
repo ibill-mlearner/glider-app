@@ -1,10 +1,10 @@
 # Glider Visualization
 
-Conway's Game of Life rules.
-    Each cell has 8 neighbors (adjacent horizontally, vertically, and diagonally).
-    A live cell survives if it has 2 or 3 live neighbors; otherwise it dies.
-    A dead cell becomes alive only if it has exactly 3 live neighbors.
-    This function counts the number of live neighbors around a given cell (x, y).
+### Conway's Game of Life rules.
+   - Each cell has 8 neighbors (adjacent horizontally, vertically, and diagonally).
+   - A live cell survives if it has 2 or 3 live neighbors; otherwise it dies.
+   - A dead cell becomes alive only if it has exactly 3 live neighbors.
+   - This function counts the number of live neighbors around a given cell (x, y).
 
 A 3D visualization of Conway's Game of Life 
 - Rendered in Three.js and driven by a Flask backend. 
