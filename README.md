@@ -64,33 +64,22 @@ glider/
 │       ├── render3d/
 │       │   ├── init_grid.js
 │       │   ├── init_scene.js
-│       │   └── update_loop.js
 │       └── ui/
 │           ├── buttons.js
 │           └── events.js
 │       ├── bootstrap_combined.js
-│       ├── render.js
-│       ├── render3d.js
 │       ├── three.core.js
 │       └── three.module.js
 ├── templates/
 │   ├── base.html
-│   ├── index.html
-│   ├── index_3d.html
-│   ├── index_combined.html
-│   └── index_controls.html
+│   └── index_combined.html
 ├── __init__.py
 ├── models.py
-├── routes.py
-├── routes_3d.py
 └── routes_combined.py
-├── websocket.py
-│
+├── shapes.py
 ├── .env
 ├── .gitignore
-├── Makefile
 ├── README.md
-├── readme_glider_project.md
 └── runner.py
 ```
 
