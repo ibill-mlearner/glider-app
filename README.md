@@ -74,12 +74,8 @@ python runner.py
 
 _________________________________________________________________________________________
 
-## Run the Server
 
-```bash
-flask run
-```
-Then visit: `http://localhost:5000`
+Then visit: `http://localhost:5000` or click the IP address server flashes when starting.
 
 ## File Layout
 
