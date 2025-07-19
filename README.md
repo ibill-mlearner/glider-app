@@ -13,12 +13,9 @@ A 3D visualization of Conway's Game of Life
 
 ## Features
 
-- Real-time simulation of Game of Life
 - 3D grid rendered via Three.js
-- RESTful control endpoints (`/start`, `/stop`, `/tick`, `/clear`, etc.)
 - Live polling frontend state
-- Modular Python backend logic
-- Pattern reset on Clear
+- Pattern reset on Clear and Rebasing
 
 - The project includes a real-time simulation of Conway's Game of Life powered by logic in `glider/core/engine.py`.
 - It renders a 3D grid using Three.js modules located in `static/js/render3d/`.
