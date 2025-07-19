@@ -27,20 +27,52 @@ A 3D visualization of Conway's Game of Life
 - Python 3.10+
 - pip / virtualenv
 - Compatible browser (WebGL support)
+_________________________________________________________________________________________
+## Running the Server
 
-## Setup
+### 1. Set up the environment (one-time setup)
+
+Create a virtual environment and install dependencies:
 
 ```bash
-# Run the Server
-
-# Set up environment (only once)
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+```
 
-# Start the server
+#### Activate the environment:
+
+- **PowerShell (Windows):**
+
+  ```powershell
+  .\.venv\Scripts\Activate.ps1
+  ```
+
+- **Command Prompt (Windows):**
+
+  ```cmd
+  .venv\Scripts\activate.bat
+  ```
+
+- **Git Bash / WSL / macOS / Linux:**
+
+  ```bash
+  source .venv/bin/activate
+  ```
+
+Then install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 2. Start the server
+
+```bash
 python runner.py
 ```
+
+_________________________________________________________________________________________
 
 ## Run the Server
 
