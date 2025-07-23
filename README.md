@@ -1,5 +1,11 @@
 # Glider Visualization
 
+### Conway's Game of Life rules.
+   - Each cell has 8 neighbors (adjacent horizontally, vertically, and diagonally).
+   - A live cell survives if it has 2 or 3 live neighbors; otherwise it dies.
+   - A dead cell becomes alive only if it has exactly 3 live neighbors.
+   - This function counts the number of live neighbors around a given cell (x, y).
+
 A 3D visualization of Conway's Game of Life 
 - Rendered in Three.js and driven by a Flask backend. 
 - Designed for modular clarity, performance testing, and integration with recursive pattern engines.
@@ -7,12 +13,9 @@ A 3D visualization of Conway's Game of Life
 
 ## Features
 
-- Real-time simulation of Game of Life
 - 3D grid rendered via Three.js
-- RESTful control endpoints (`/start`, `/stop`, `/tick`, `/clear`, etc.)
 - Live polling frontend state
-- Modular Python backend logic
-- Pattern reset on Clear
+- Pattern reset on Clear and Rebasing
 
 - The project includes a real-time simulation of Conway's Game of Life powered by logic in `glider/core/engine.py`.
 - It renders a 3D grid using Three.js modules located in `static/js/render3d/`.
@@ -74,12 +77,8 @@ python runner.py
 
 _________________________________________________________________________________________
 
-## Run the Server
 
-```bash
-flask run
-```
-Then visit: `http://localhost:5000`
+Then visit: `http://localhost:5000` or click the IP address server flashes when starting.
 
 ## File Layout
 
