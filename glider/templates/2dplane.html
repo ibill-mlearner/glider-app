@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Glider Visualization – 3D + Controls{% endblock %}
+{% block title %}Glider Visualization – 2D Plane{% endblock %}
 
 {% block head %}
 
@@ -13,5 +13,5 @@
 <!--Body block content-->
 
 <div id="three-container"></div>
-<script type="module" src="{{ url_for('static', filename='js/bootstrap_combined.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/bootstrap_2d.js') }}"></script>
 {% endblock %}
