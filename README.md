@@ -86,27 +86,35 @@ Then visit: `http://localhost:5000` or click the IP address server flashes when 
 glider/
 ├── core/
 │   ├── engine.py
+│   ├── engine_3d.py
 │   ├── glider_state_adapter.py
 │   └── tick_controller.py
 ├── static/
 │   ├── css/
 │   │   └── style.css
 │   └── js/
+│       ├── render2d/
+│       │   ├── init_grid.js
+│       │   ├── init_scene.js
 │       ├── render3d/
 │       │   ├── init_grid.js
 │       │   ├── init_scene.js
 │       └── ui/
 │           ├── buttons.js
 │           └── events.js
-│       ├── bootstrap_combined.js
+│       ├── bootstrap_2d.js
+│       ├── bootstrap_3d.js
+│       ├── OrbitControls.js
 │       ├── three.core.js
 │       └── three.module.js
 ├── templates/
-│   ├── base.html
-│   └── index_combined.html
+│   ├── 2dplane.html
+│   ├── 3dplane.html
+│   └── base.html
 ├── __init__.py
 ├── models.py
-└── routes_combined.py
+├── routes_combined.py
+├── resources.py
 ├── shapes.py
 ├── .env
 ├── .gitignore
@@ -126,6 +134,6 @@ glider/
 
 This project is stable and functional. Future updates may include:
 
+- CUDA core rendering for 3d engine
 - AI shape injection and saving
 - AI training based on shape movement
-- 3rd axis in Z direction
